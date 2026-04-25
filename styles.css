@@ -1,18 +1,40 @@
+/*Color palette*/
+:root {
+  --bg: #0f1512;
+  --surface: #16201a;
+
+  --text: #e6f4ea;
+  --muted: #9fb5a3;
+
+  --accent: #16a34a;       /* main green */
+  --accent-dark: #38b968;  /* darker hover/active */
+}
+
 .content {
     max-width: 850px;
     margin: 0;
     padding: 0px 50px 0px 50px;
 }
 
+.content h1, .content h2, .content h3 {
+    color: var(--text);
+}
+
+.content p {
+    color: var(--muted);
+}
+
 a {
-    color: blue;
+    color: var(--accent);
     text-decoration: none;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease, color 0.2s ease, transform 0.1s ease;
 }
 
 a:hover {
+    color: var(--accent-dark);
     text-decoration: underline;
     opacity: 0.7;
+    transform: translateY(-1px);
 }
 
 p {
@@ -21,7 +43,7 @@ p {
 
 body {
     /*Change this to something that fits the theme later:*/
-    background: #f7f7f7;
+    background: var(--bg);
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #111;
@@ -32,13 +54,14 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: white;
+    background: var(--surface);
     border-bottom: 1px solid #ddd;
     position: sticky;
     top: 0;
 }
 
 .site-header .logo {
+    color: var(--text);
     font-weight: bold;
     font-size: 1.2rem;
 }
