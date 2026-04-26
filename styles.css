@@ -16,6 +16,8 @@
     padding: 0px 50px 0px 50px;
     width: min(90%, 1200px);
     margin: 0 auto;
+
+    flex: 1;
 }
 
 .content h1, .content h2, .content h3 {
@@ -42,10 +44,11 @@ a:hover {
     transform: translateY(-1px);
 }
 
-/*Random Stuff*/
+/*Random Tag-Specific Stuff*/
 p {
     margin-bottom: 1rem;
     font-family: 'Inter', sans-serif;
+    color: var(--muted)
 }
 
 q {
@@ -53,10 +56,28 @@ q {
     font-family: 'Space Grotesk', sans-serif;
 }
 
+ul {
+    color: var(--muted)
+}
+
+img {
+    width: 100;
+    height: 150;
+}
+
+html, body {
+    height: 100%
+    margin: 0;
+}
+
 body {
     background: var(--bg);
     line-height: 1.6;
     color: #111;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 
@@ -84,6 +105,21 @@ nav {
     font-family: 'Inter', sans-serif;
     display: flex;
     gap: 1.2rem;
+}
+
+
+/*Site Footer Styling*/
+.site-footer {
+    text-align: center;
+    padding: 1rem 1rem;
+    margin-top: 4rem;
+    width: 100%;
+
+    color: var(--muted);
+    background-color: var(--surface);
+    font-size: 16px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08)
 }
 
 
@@ -153,8 +189,90 @@ nav {
 /*Fonts*/
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Grotesk Space', sans-serif;
+    color: var(--text);
 }
 
+/*Project Page Gallery*/
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#main-image {
+    width: 100%;
+    width: 800px;
+    height: 450px;
+
+    object-fit: contain;
+
+    background: #0b0f0d;
+    border-radius: 10px;
+}
+
+.gallery img {
+    max-width: 700px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.gallery-btn {
+    background: var(--surface);
+    color: var(--accent);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 8px;
+}
+
+.gallery-btn:hover {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.thumbnails img {
+    width: 120px;
+    cursor: pointer;
+    border-radius: 6px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.thumbnails img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/*Itch.io Button Link*/
+.itch-button {
+    display: inline-block;
+    background: #fa5c5c;
+    color: white;
+    text-decoration: none;
+
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+
+    font-weight: bold;
+    font-size: 1rem;
+
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.itch-button:hover {
+    background: #e14b4b;
+    transform: translateY(-2px);
+}
 
 /*Mobile Specifications (or if window gets too narrow*/
 @media (max-width: 600px) {
@@ -179,5 +297,23 @@ h1, h2, h3, h4, h5, h6 {
     .card-reverse .card-text {
         order: unset;
         width: 100%;
+    }
+
+
+    /*Game Page Gallery*/
+
+    .gallery-btn {
+        font-size: 1.5rem;
+        padding: 0.75rem;
+    }
+
+    .gallery .main-image {
+        width: 100%;
+        max-width: 300px;
+        max-height: 200px;
+    }
+
+    .thumbnails img {
+        width: 80px;
     }
 }

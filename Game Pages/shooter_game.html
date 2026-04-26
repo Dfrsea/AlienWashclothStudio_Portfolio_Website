@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top-Down Shooter</title>
+
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">Alien Washcloth</div>
+
+        <nav>
+            <a href="../index.html" class="nav-link">Home</a></li>
+            <a href="../about_page.html" class="nav-link">About</a></li>
+            <a href="../projects.html" class="nav-link">Projects</a></li>
+            <a href="../devlog.html" class="nav-link">Devlog</a></li>
+        </nav>
+    </header>
+
+
+    <main class="content">
+        <a href="../projects.html">←Back</a>
+        <h2>Overview</h2>
+
+        <div class="gallery"data-images='[
+            "../Images/ShooterStartScreen",s
+            "../Images/IconScreenshot",
+            "../Images/GameplayScreenshot"
+        ]'>
+            <button class="gallery-btn prev" onclick="changeSlide(-1)">❮</button>
+            <img class="main-image" id="main-image" src="../Images/ShooterStartScreen.png" alt="Game Screenshot">
+            <button class="gallery-btn next" onclick="changeSlide(1)">❯</button>
+        </div>
+
+
+        <p>Don't let its simplicity fool you! This fast-paced
+            shooter is weirdly addictive, perfect for action
+            enthusiasts. Complete with enemies, score, and even
+            health upgrades, this game may be small, but it's simmering
+            with fun!
+        </p>
+
+        <h2>Controls: </h2>
+        <ul>
+            <li>WASD for movement</li>
+            <li>Mouse to aim</li>
+            <li>Left Mouse Button to shoot</li>
+        </ul>
+
+        <h2>Goal: </h2>
+        <p>Surive as long as possible! Dodge & shoot enemies,
+            avoid getting hit, and if you're running low, try to
+            find a health upgrade!
+        </p>
+
+        <h2>Features: </h2>
+        <ul>
+            <li>Enemies that spawn randomly from the edges of the screen.</li>
+            <li>Score and health systems</li>
+            <li>Randomly spawning health upgrades</li>
+        </ul>
+
+
+        <h2>Play: </h2>
+        <a href="https://alien-washcloth.itch.io/simple-top-down-shooter" target="_blank" class="itch-button">
+            Play on Itch.io
+        </a>
+    </main>
+
+
+    <footer class="site-footer">
+        <p>Alien Washcloth • 2026</p>
+    </footer>
+
+    <script src="../gallery.js"></script>
+</body>
+</html>
