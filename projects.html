@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 <body>
     <header class="site-header">
         <div class="logo">Alien Washcloth</div>
@@ -20,11 +22,37 @@
     
     <main>
         <div class="content">
+
             <h1>Projects</h1>
             <p>Explore our collection of games.</p>
-            <img src="Images/ShooterStartScreen.png" alt="Shooter Game Screenshot" width = "300" height = "200">
-            <p>Don't let it's simplicity fool you! This fast-paced shooter is weirdly addictive, perfect for action enthusiasts.</p>
-            <a href="https://alien-washcloth.itch.io/simple-top-down-shooter">Play Now</a>
+
+            <div class="game-card">
+                <h3 class="card-title">Top-Down Shooter Game</h3>
+
+                <div class="card-body">
+                    <img class="card-img" src="Images/ShooterStartScreen.png" alt="Shooter Game Screenshot" width = "300" height = "200">
+                    
+                    <div class="card-text">
+                        <p class="card-desc">Don't let it's simplicity fool you! This fast-paced shooter is weirdly addictive, perfect for action enthusiasts.</p>
+                        <a class="card-link" href="https://alien-washcloth.itch.io/simple-top-down-shooter">Play Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card card-reverse">
+                <h3 class="card-title">Weird Thingy here</h3>
+                
+                <div class="card-body">
+                    <img class="card-img" src="Images/ShooterStartScreen.png">
+                    <div class="card-text">
+                        <p class="card-desc">
+                            A strange experimental game where things don’t behave normally.
+                        </p>
+                        <a href="#" class="card-link">Play on itch.io</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
     

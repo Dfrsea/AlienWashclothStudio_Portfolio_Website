@@ -1,7 +1,7 @@
 /*Color palette*/
 :root {
   --bg: #0f1512;
-  --surface: #16201a;
+  --surface: #203b2c;
 
   --text: #e6f4ea;
   --muted: #9fb5a3;
@@ -10,14 +10,17 @@
   --accent-dark: #38b968;  /* darker hover/active */
 }
 
+
 .content {
     max-width: 850px;
-    margin: 0;
     padding: 0px 50px 0px 50px;
+    width: min(90%, 1200px);
+    margin: 0 auto;
 }
 
 .content h1, .content h2, .content h3 {
     color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 .content p {
@@ -39,12 +42,16 @@ a:hover {
 
 p {
     margin-bottom: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+q {
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 body {
-    /*Change this to something that fits the theme later:*/
     background: var(--bg);
-    font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #111;
 }
@@ -58,15 +65,109 @@ body {
     border-bottom: 1px solid #ddd;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 .site-header .logo {
+    font-family: 'Space Grotesk', sans-serif;
     color: var(--text);
     font-weight: bold;
     font-size: 1.2rem;
 }
 
 nav {
+    font-family: 'Inter', sans-serif;
     display: flex;
     gap: 1.2rem;
+}
+
+.game-card {
+    background: var(--surface);
+    padding: 1.5rem;
+    border-radius: 10px;
+
+    border: 1px solid rgba(255,255,255,0.05);
+    margin-bottom: 2rem;
+
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/*game-card-reverse*/
+
+.card-reverse .card-title {
+    text-align: right;
+}
+
+.card-reverse .card-img {
+    order: 2;
+}
+
+.card-reverse .card-text {
+    order: 1;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.card-body {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.card-text {
+    flex: 1;
+    order: 1;
+}
+
+.card-title {
+    margin: 0 0 0.5rem;
+    text-align: left;
+    color: var(--text);
+}
+
+.card-desc {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.card-link {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.card-img {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Grotesk Space', sans-serif;
+}
+@media (max-width: 600px) {
+    .card-body {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+    }
+    
+    .card-title,
+    .card-reverse .card-title {
+        text-align: left;
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .card-img,
+    .card-text,
+    .card-reverse .card-img,
+    .card-reverse .card-text {
+        order: unset;
+        width: 100%;
+    }
 }
